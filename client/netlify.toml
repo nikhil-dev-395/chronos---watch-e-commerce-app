@@ -1,5 +1,5 @@
 [build]
   base = "client"
-  publish = "client/build"
+  publish = "client/dist"
   command = "npm run build"
-  environment = { NODE_VERSION = "20.0.0" }
+  node_version = "20.9.0"
