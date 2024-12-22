@@ -2,6 +2,7 @@ import React from "react";
 
 import {
   FavouriteIcon,
+  Menu01Icon,
   ShoppingBasket01Icon,
   UserCircleIcon,
 } from "hugeicons-react";
@@ -18,7 +19,7 @@ const Navbar = () => {
             chronos
           </h2>
 
-          <ul className="flex gap-x-7 text-[1rem] text-slate-300 uppercase">
+          <ul className=" gap-x-7 text-[1rem] text-slate-300 uppercase hidden md:flex">
             <li>
               <Link
                 to="/watches"
@@ -52,14 +53,14 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <ul className="flex gap-x-8">
+          <ul className=" gap-x-8 hidden md:flex">
             <li className="flex gap-3">
               {/* money type */}
               <div>
                 <select
                   id="money-type"
                   name="money-type"
-                  className="rounded-2xl bg-purple-200/90 text-black border backdrop-blur-lg accent-transparent py-2 px-3 outline-none"
+                  className="rounded-2xl bg-purple-200/90 text-black border backdrop-blur-lg accent-transparent py-2 px-3 outline-none "
                 >
                   <option value="analog">INR</option>
                   <option for="money-type">EUR </option>
@@ -96,7 +97,48 @@ const Navbar = () => {
               </span>
             </li>
           </ul>
+
+          {/* menu */}
+          <div className="block md:hidden">
+            <Menu01Icon />
+          </div>
         </nav>
+        {/* new navbar for small devices */}
+        <div className="bg-slate-500 w-full h-screen md:hidden">
+          <ul className=" gap-x-7 text-[1rem] text-slate-300 uppercase \">
+            <li>
+              <Link
+                to="/watches"
+                className={
+                  pathLocation.pathname === "/watches" ? "text-orange-700" : ""
+                }
+              >
+                watches
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/warranty"
+                className={
+                  pathLocation.pathname === "/warranty" ? "text-orange-700" : ""
+                }
+              >
+                {" "}
+                warranty & services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/stores"
+                className={
+                  pathLocation.pathname === "/stores" ? "text-orange-700" : ""
+                }
+              >
+                stores
+              </Link>
+            </li>
+          </ul>
+        </div>
       </header>
     </>
   );

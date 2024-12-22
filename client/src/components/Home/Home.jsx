@@ -1,3 +1,5 @@
+/* Home - this is nothing but a carousel effect only , for showing watches */
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Video from "../../utils/video/Video";
