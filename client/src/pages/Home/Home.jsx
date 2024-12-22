@@ -19,51 +19,55 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 w-full justify-around mx-auto relative">
-          {/* watch details */}
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full justify-around mx-auto relative gap-8">
+          {/* Watch Details */}
           <div className="text-white pt-8 flex flex-col items-start space-y-4">
             <div className="text-sm text-gray-400">CH-6725S-BKGO</div>
-
-            <p className="uppercase  text-white font-sans pb-5 text-5xl font-light leading-tight">
+            <p className="uppercase text-white font-sans pb-5 md:text-5xl text-2xl font-light leading-tight">
               flying grand regulator skeleton cowboy
             </p>
             <Link
               to="/findMoreWatch"
-              className="bg-sky-500 px-6 py-2 rounded-2xl capitalize text-black "
+              className="bg-sky-500 px-6 py-2 rounded-2xl capitalize text-black"
             >
               find More Watch
             </Link>
           </div>
 
-          {/* live watch image */}
-          <div className="w-[40vw] bg-cover   ">
-            <img src="/Images/watch.png" alt="watch" />
+          {/* Live Watch Image */}
+          <div className="w-full md:w-[40vw] flex justify-center bg-cover">
+            <img
+              src="/Images/watch.png"
+              alt="watch"
+              className="max-w-full h-auto"
+            />
           </div>
 
-          {/* video of image */}
-          <div className="   ">
+          {/* TODO: make this in full size in mobile size */}
+          {/* Video of Watch */}
+          <div className="py-5  md:absolute  md:bottom-0 md:right-0">
             <Video videoSrc="/video/watch.mp4" />
           </div>
         </div>
 
         {/* right and left watch name , link and how many watch are there in watch scale */}
-        <div className="flex items-center justify-between">
-          {/* left arrow */}
-          <div className="uppercase text-[1rem] text-slate-50 flex items-center gap-2">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Left Arrow */}
+          <div className="uppercase md:text-[1rem] text-sm text-slate-50 flex items-center gap-2">
             <SquareArrowLeft01Icon color="white" />
             <span>space timer jupiter</span>
           </div>
 
-          {/* watch scale for showing number */}
-          <div className="w-[30%] bg-white">
-            {/* <hr className="w-[30%] bg-white" /> */}
-          </div>
-          {/* right arrow */}
-          <div className="uppercase text-[1rem] text-slate-50 flex items-center gap-2">
+          {/* Watch Scale for Showing Number */}
+          <div className="w-full md:w-[30%] h-1 bg-white"></div>
+
+          {/* Right Arrow */}
+          <div className="uppercase md:text-[1rem] text-sm text-slate-50 flex items-center gap-2">
             <span>space timer jupiter</span>
             <SquareArrowRight01Icon color="white" />
           </div>
         </div>
+
         <History />
       </section>
     </>

@@ -22,7 +22,7 @@ const History = () => {
             <img
               src={history[0].creator}
               alt="creator"
-              className="w-[30vw]  h-[40vh] object-cover rounded-lg"
+              className="md:w-[30vw] w-56 h-40  md:h-[40vh] object-cover rounded-lg"
             />
           </div>
 
@@ -32,7 +32,7 @@ const History = () => {
             <img
               src={history[0].watchImage}
               alt="creator"
-              className="w-[30vw]  h-[40vh] object-cover rounded-lg"
+              className="md:w-[30vw]  md:h-[40vh] w-56 h-40 object-cover rounded-lg"
             />
           </div>
 
@@ -42,7 +42,7 @@ const History = () => {
             <img
               src={history[0].watchImageOnUsing}
               alt="creator"
-              className="w-[30vw]  h-[40vh] object-cover rounded-lg"
+              className="md:w-[30vw]  md:h-[40vh] w-56 h-40 object-cover rounded-lg"
             />
           </div>
         </div>

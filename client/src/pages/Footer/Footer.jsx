@@ -20,38 +20,34 @@ const Footer = () => {
 
   return (
     <footer className="w-full h-auto border-t-2 border-slate-200 ">
-      <section className="w-[90%] mx-auto  grid grid-cols-4 pt-5 text-blue-100">
-        <div id="warranty&services" className="  ">
-          <h2 className="text-[1rem] font-semibold ">WARRANTY & SERVICE</h2>
-
-          <div className="flex flex-col py-6 gap-y-2 text-orange-300">
+      <section className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 pt-5 text-blue-100">
+        <div id="warranty&services" className="flex flex-col">
+          <h2 className="text-[1rem] font-semibold">WARRANTY & SERVICE</h2>
+          <div className="flex flex-col md:pt-6 pt-1 gap-y-2 text-orange-300">
             <Link to="/extend-warranty">extend-warranty</Link>
             <Link to="/care-maintain">care-maintain</Link>
           </div>
         </div>
-        <div id="company" className="text-blue-100">
+        <div id="company" className="">
           <h2 className="text-[1rem] font-semibold uppercase">company</h2>
-
-          <div className="flex flex-col py-6 gap-y-2 text-orange-300">
+          <div className="flex flex-col md:pt-6 pt-1 gap-y-2 text-orange-300">
             <Link to="/our-history">our-history</Link>
             <Link to="/contact">contact</Link>
           </div>
         </div>
         <div id="INFORMATION" className="">
           <h2 className="text-[1rem] font-semibold uppercase">INFORMATION</h2>
-
-          <div className="flex flex-col py-6 gap-y-2 text-orange-300">
+          <div className="flex flex-col md:pt-6 pt-1 gap-y-2 text-orange-300">
             <Link to="/right-to-cancel">right-to-cancel</Link>
             <Link to="/term-condition">term-condition</Link>
           </div>
         </div>
         <div id="address" className="">
-          <h2 className="text-[1rem] font-semibold uppercase">chronos </h2>
-
-          <div className="  py-6  text-orange-300">
-            <ul className="">
-              <li className="pb-5">
-                chaitanya colony , yashoda nagar , amt , 444606
+          <h2 className="text-[1rem] font-semibold uppercase">chronos</h2>
+          <div className="md:pt-6 pt-1 text-orange-300">
+            <ul>
+              <li className="md:pb-5 ">
+                chaitanya colony, yashoda nagar, amt, 444606
               </li>
               <li className="font-mono text-blue-500">nikhilw395@gmail.com</li>
               <li className="font-mono text-blue-500">+91 235204793849</li>
