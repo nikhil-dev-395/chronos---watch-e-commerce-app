@@ -1,3 +1,0 @@
-# Chronos - e commerce app
-
-
