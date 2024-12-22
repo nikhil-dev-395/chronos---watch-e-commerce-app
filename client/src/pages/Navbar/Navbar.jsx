@@ -72,7 +72,7 @@ const Navbar = () => {
                 <select
                   id="language-type"
                   name="language-type"
-                  className="rounded-2xl bg-indigo-400/60 py-2 px-3 outline-none inline-block text-black"
+                  className="rounded-2xl bg-indigo-200/60 py-2 px-3 outline-none inline-block text-black"
                 >
                   <option for="language-type">ENG </option>
                   <option value="analog">FR</option>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Video from "../../utils/video/Video";
+import Video from "../../components/video/Video";
 import { SquareArrowLeft01Icon, SquareArrowRight01Icon } from "hugeicons-react";
 
 const Home = () => {
