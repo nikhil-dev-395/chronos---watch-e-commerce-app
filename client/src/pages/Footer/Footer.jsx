@@ -62,7 +62,7 @@ const Footer = () => {
 
       <div className="text-white w-[90%] mx-auto py-6">
         <ul className="flex justify-between">
-          <li>&copy; 2024 chronos</li>
+          <li className="uppercase">&copy; 2024 chronos</li>
           <li className="flex gap-x-3 items-center">
             <Link to={socialMediaUrl.facebook_url}>
               <Facebook01Icon />

@@ -4,11 +4,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Video from "../../components/video/Video";
 import { SquareArrowLeft01Icon, SquareArrowRight01Icon } from "hugeicons-react";
+import History from "../../components/history/History";
 
 const Home = () => {
   return (
     <>
-      <section className="bg-[#050811] w-full max-w-[90%] mx-auto  h-screen ">
+      <section className="bg-[#050811] w-full max-w-[90%] mx-auto  h-auto ">
         <div className="flex justify-between items-center pt-7 ">
           <div className="bg-[#053B67]/80 px-4 py-3 rounded-3xl text-sky-500 uppercase text-xs backdrop-blur-2xl">
             Limited to <span className="text-white">15 pieces</span>
@@ -63,6 +64,7 @@ const Home = () => {
             <SquareArrowRight01Icon color="white" />
           </div>
         </div>
+        <History />
       </section>
     </>
   );
