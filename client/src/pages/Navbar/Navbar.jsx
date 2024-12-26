@@ -104,7 +104,8 @@ const Navbar = () => {
           </div>
         </nav>
         {/* new navbar for small devices */}
-        <div className="bg-slate-500 w-full h-screen md:hidden">
+        {/* TODO : remove hidden from here while developing new nav for small devices */}
+        <div className="bg-slate-500 w-full h-screen hidden md:hidden">
           <ul className=" gap-x-7 text-[1rem] text-slate-300 uppercase \">
             <li>
               <Link
