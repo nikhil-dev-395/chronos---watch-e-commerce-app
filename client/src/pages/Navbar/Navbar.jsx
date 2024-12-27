@@ -8,12 +8,13 @@ import {
 } from "hugeicons-react";
 import { Link, useLocation } from "react-router-dom";
 
-const NavItem = ({ path, label }) => {
+const NavItem = ({ path, label, onClick }) => {
   const pathLocation = useLocation();
   return (
     <li>
       <Link
         to={path}
+        onClick={onClick}
         className={pathLocation.pathname === path ? "text-orange-700" : ""}
       >
         {label}
@@ -84,14 +85,30 @@ const Navbar = () => {
 
       {isMenuOpen && (
         <div className=" w-full h-screen md:hidden ">
-          <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-8">
-            <NavItem path="/" label="home" />
-            <NavItem path="/watches" label="watches" />
-            <NavItem path="/warranty" label="warranty & services" />
-            <NavItem path="/stores" label="stores" />
+          <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-8 ">
+            <NavItem onClick={() => setMenuOpen(false)} path="/" label="home" />
+            <NavItem
+              onClick={() => setMenuOpen(false)}
+              path="/watches"
+              label="watches"
+            />
+            <NavItem
+              onClick={() => setMenuOpen(false)}
+              path="/warranty"
+              label="warranty & services"
+            />
+            <NavItem
+              onClick={() => setMenuOpen(false)}
+              path="/stores"
+              label="stores"
+            />
             {/* favorite */}
             <div className="flex gap-4">
-              <NavItem path="/favorite" label="favorite" />
+              <NavItem
+                onClick={() => setMenuOpen(false)}
+                path="/favorite"
+                label="favorite"
+              />
               <div className="relative">
                 <FavouriteIcon size={30} strokeWidth={0.8} color="white" />
                 <span className="bg-slate-500 text-white px-1 rounded-3xl absolute top-5 left-2">
@@ -103,7 +120,11 @@ const Navbar = () => {
             {/* cart */}
 
             <div className="flex gap-4">
-              <NavItem path="/cart" label="cart" />
+              <NavItem
+                onClick={() => setMenuOpen(false)}
+                path="/cart"
+                label="cart"
+              />
               <div className="relative">
                 <ShoppingBasket01Icon
                   size={30}
