@@ -16,33 +16,33 @@ const History = () => {
   return (
     <>
       <section>
-        <div className="flex justify-between py-9 gap-4">
+        <div className="flex md:justify-between flex-wrap md:flex-nowrap  py-9 gap-4">
           {/* creator or owner or a person who is responsible for developing this watch */}
-          <div className="">
+          <div className="mx-auto">
             <img
               src={history[0].creator}
               alt="creator"
-              className="md:w-[30vw] w-56 h-40  md:h-[40vh] object-cover rounded-lg"
+              className="md:w-[30vw] w-72 h-60   md:h-[50vh] object-cover rounded-lg"
             />
           </div>
 
           {/* watch */}
 
-          <div className="">
+          <div className="mx-auto">
             <img
               src={history[0].watchImage}
               alt="creator"
-              className="md:w-[30vw]  md:h-[40vh] w-56 h-40 object-cover rounded-lg"
+              className="md:w-[30vw]  md:h-[50vh]  w-72 h-60  object-cover rounded-lg"
             />
           </div>
 
           {/* watch on use */}
 
-          <div className="">
+          <div className="mx-auto">
             <img
               src={history[0].watchImageOnUsing}
               alt="creator"
-              className="md:w-[30vw]  md:h-[40vh] w-56 h-40 object-cover rounded-lg"
+              className="md:w-[30vw]  md:h-[50vh]  w-72 h-60 object-cover rounded-lg"
             />
           </div>
         </div>

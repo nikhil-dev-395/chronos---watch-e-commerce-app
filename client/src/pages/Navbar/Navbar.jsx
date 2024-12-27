@@ -84,7 +84,7 @@ const Navbar = () => {
 
       {isMenuOpen && (
         <div className=" w-full h-screen md:hidden ">
-          <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-7">
+          <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-8">
             <NavItem path="/" label="home" />
             <NavItem path="/watches" label="watches" />
             <NavItem path="/warranty" label="warranty & services" />
@@ -118,7 +118,7 @@ const Navbar = () => {
             {/*
              * REMEMBER : this is for selecting a money and language
              */}
-            <li className="flex gap-3">
+            <li className="flex gap-7 pt-10">
               <select
                 id="money-type"
                 name="money-type"
