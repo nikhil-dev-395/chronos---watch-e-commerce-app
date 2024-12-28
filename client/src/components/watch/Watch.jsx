@@ -1,6 +1,6 @@
 import { FavouriteIcon, ShoppingBasketAdd02Icon } from "hugeicons-react";
 
-const Watch = ({ image, limited, model, name }) => {
+const Watch = ({ image, limited, model, name, price }) => {
   return (
     <div className="bg-zinc-900 w-full sm:w-[48%] md:w-[42%] lg:w-[30%] p-5 rounded-xl mx-auto">
       <div className="flex justify-between items-center">
@@ -23,6 +23,10 @@ const Watch = ({ image, limited, model, name }) => {
       <p className="uppercase text-white font-sans font-light leading-tight">
         {name}
       </p>
+
+      <div className=" text-sky-50 font-semibold text-xl pt-3 pb-2">
+        ₹ {price || "price yet to decide"}
+      </div>
     </div>
   );
 };

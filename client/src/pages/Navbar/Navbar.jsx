@@ -11,7 +11,7 @@ import { Link, useLocation } from "react-router-dom";
 const NavItem = ({ path, label, onClick }) => {
   const pathLocation = useLocation();
   return (
-    <li>
+    <li className="hover:text-yellow-600">
       <Link
         to={path}
         onClick={onClick}
