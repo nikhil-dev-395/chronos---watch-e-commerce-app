@@ -1,10 +1,6 @@
 import React from "react";
-import Cart from "../../components/shoppingcart/cart";
+import Cart from "../../components/shoppingcart/Cart.jsx";
 import { Contact02Icon, ContactIcon } from "hugeicons-react";
-
-const CheckOut = () => {
-  <h1>checkout</h1>;
-};
 
 const ShoppingCart = () => {
   return (
