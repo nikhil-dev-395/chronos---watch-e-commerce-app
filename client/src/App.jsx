@@ -4,8 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Navbar from "./pages/Navbar/Navbar.jsx";
 import Footer from "./pages/Footer/Footer.jsx";
-import Cart from "./pages/Cart/Cart.jsx";
 import WatchPage from "./pages/watch/WatchPage.jsx";
+import ShoppingCart from "./pages/Cart/ShoppingCart.jsx";
 const App = () => {
   return (
     <div className="bg-[#050811] cursor-default text-white">
@@ -13,7 +13,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route element={<Home />} path="/" />
-          <Route element={<Cart />} path="/cart" />
+          <Route element={<ShoppingCart />} path="/ShoppingCart" />
           <Route element={<WatchPage />} path="/watches" />
         </Routes>
         <Footer />

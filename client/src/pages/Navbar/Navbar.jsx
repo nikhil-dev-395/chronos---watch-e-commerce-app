@@ -122,7 +122,7 @@ const Navbar = () => {
             <div className="flex gap-4">
               <NavItem
                 onClick={() => setMenuOpen(false)}
-                path="/cart"
+                path="/ShoppingCart"
                 label="cart"
               />
               <div className="relative">

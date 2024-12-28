@@ -1,3 +1,4 @@
+import { Search01Icon, Search02Icon } from "hugeicons-react";
 import Watch from "../../components/watch/Watch";
 const WatchPage = () => {
   // Array of watches
@@ -56,12 +57,23 @@ const WatchPage = () => {
       limited: 5,
       model: "CH-8300F-RGLD",
       name: "luxury grand regulator rose gold",
-
     },
   ];
 
   return (
     <section className="">
+      {/*
+      * filtering section are avail here...
+      * add what filtering you want to add here ..
+
+      filtering option :- size , dial , company name
+      */}
+      <div className="bg-slate-400 px-3 py-3 flex  ">
+        <div className="bg-red-400 inline-block rounded-full px-3 py-3 ">
+          <Search01Icon color="blue" />
+        </div>
+      </div>
+
       <div className="w-full flex  flex-wrap py-5 max-w-[85%] gap-9 mx-auto ">
         {watches.map((watch, index) => (
           <Watch
