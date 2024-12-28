@@ -12,7 +12,7 @@ const Cart = ({
   price = "0",
 }) => {
   return (
-    <section className="bg-slate-950 border border-slate-900 w-full max-w-[270px] max-h-[470px] rounded-3xl mx-auto">
+    <section className="bg-slate-950 border border-slate-900 w-full max-w-[270px] max-h-[470px] sm:max-w-[200px] sm:max-h-[400px] lg:max-w-[270px] lg:max-h-[470px] rounded-3xl mx-auto">
       <div className="bg-slate-900 w-full h-auto p-2 rounded-3xl">
         <div className="flex justify-between items-center">
           {limited && (
@@ -24,15 +24,17 @@ const Cart = ({
             <Cancel01Icon className="text-slate-500 cursor-pointer" />
           </div>
         </div>
-        <div className=" flex justify-center">
+        <div className="flex justify-center">
           <img
             src={image}
             alt={`${name || "Cart item"} image`}
-            className="w-2/3 h-auto rounded-lg object-cover"
+            className="w-2/3 sm:w-3/4 h-auto rounded-lg object-cover"
           />
         </div>
-        <div className=" text-gray-400 pt-3 pb-2 text-xs">{model}</div>
-        <p className="uppercase  font-sans font-light leading-tight text-sm">
+        <div className="text-gray-400 pt-3 pb-2 text-xs sm:text-[10px]">
+          {model}
+        </div>
+        <p className="uppercase font-sans font-light leading-tight text-sm sm:text-xs">
           {name}
         </p>
       </div>
@@ -41,35 +43,37 @@ const Cart = ({
       <div className="px-3 flex flex-wrap gap-3 capitalize">
         {/* strap */}
         <div className="">
-          <h3 className="capitalize">strap</h3>
-          <p className="text-xs text-slate-500 capitalize">
+          <h3 className="capitalize sm:text-xs">strap</h3>
+          <p className="text-xs text-slate-500 capitalize sm:text-[10px]">
             lourisian alligator leather
           </p>
         </div>
 
         {/* strap size */}
         <div className="">
-          <label htmlFor="size" className=" py-3 pr-5">
+          <label htmlFor="size" className="py-3 pr-5 sm:text-xs">
             strap size
           </label>
           <select
             name="size"
             id=""
-            className="bg-slate-300 text-black rounded-xl  px-2 py-2 outline-none text-xs"
+            className="bg-slate-300 text-black rounded-xl px-2 py-2 outline-none text-xs sm:text-[10px]"
           >
             <option value="22cm">22cm</option>
-            <option value="22cm">12cm</option>
-            <option value="22cm">16cm</option>
+            <option value="12cm">12cm</option>
+            <option value="16cm">16cm</option>
           </select>
         </div>
 
         {/* buckle */}
         <div className="">
-          <h3>buckle</h3>
-          <p className="text-xs text-slate-500">lourisian alligator leather</p>
+          <h3 className="sm:text-xs">buckle</h3>
+          <p className="text-xs text-slate-500 sm:text-[10px]">
+            lourisian alligator leather
+          </p>
         </div>
       </div>
-      <div className="text-sky-600 font-semibold text-xl pt-3 pb-2 px-4">
+      <div className="text-sky-600 font-semibold text-xl sm:text-lg pt-3 pb-2 px-4">
         {price || "price yet to decide"} ₹
       </div>
     </section>

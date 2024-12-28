@@ -30,7 +30,7 @@ const ShoppingCart = () => {
               <h1 className="text-gray-400 md:uppercase capitalize text-sm tracking-widest">
                 Tax (18%)
               </h1>
-              <span className="text-white font-thin">10,894</span>
+              <span className="text-white font-thin text-xs">₹ 10,894</span>
             </div>
 
             {/* Total Exclusive of Tax */}
@@ -39,7 +39,7 @@ const ShoppingCart = () => {
                 Total excl. tax
               </h1>
               <span className="text-white font-thin md:text-sm text-xs">
-                1,28,894
+                ₹ 1,28,894
               </span>
             </div>
 
@@ -49,7 +49,7 @@ const ShoppingCart = () => {
                 Total incl. tax
               </h1>
               <span className="text-sky-50 font-bold md:text-lg text-xs">
-                1,39,788
+                ₹ 1,39,788
               </span>
             </div>
 
@@ -62,10 +62,10 @@ const ShoppingCart = () => {
             <div className="">
               {/* direct contact */}
               <div className="flex flex-wrap md:flex-nowrap items-center justify-between md:pt-14">
-                <span className="flex md:text-xl text-sm pt-4 uppercase gap-4">
+                <span className="flex md:text-xl text-[11px] pt-4 uppercase gap-4 items-center py-3 md:py-0">
                   {" "}
                   direct contact
-                  <ContactIcon />
+                  <ContactIcon  />
                 </span>
                 <a href="tel:9359480462">
                   <img

@@ -59,19 +59,25 @@ const Navbar = () => {
             </select>
           </li>
           <li className="relative">
-            <FavouriteIcon size={30} strokeWidth={0.8} color="white" />
-            <span className="bg-slate-500 text-white px-1 rounded-3xl absolute top-5 left-2">
-              0
-            </span>
+            <Link to="/favorite">
+              <FavouriteIcon size={30} strokeWidth={0.8} color="white" />
+              <span className="bg-slate-500 text-white px-1 rounded-3xl absolute top-5 left-2">
+                0
+              </span>
+            </Link>
           </li>
           <li>
-            <UserCircleIcon size={30} strokeWidth={0.8} color="white" />
+            <Link to="/user">
+              <UserCircleIcon size={30} strokeWidth={0.8} color="white" />
+            </Link>
           </li>
           <li className="relative">
-            <ShoppingBasket01Icon size={30} strokeWidth={0.8} color="white" />
-            <span className="bg-slate-50 text-slate-900 px-1 rounded-3xl absolute top-5 left-2">
-              0
-            </span>
+            <Link to="/ShoppingCart">
+              <ShoppingBasket01Icon size={30} strokeWidth={0.8} color="white" />
+              <span className="bg-slate-50 text-slate-900 px-1 rounded-3xl absolute top-5 left-2">
+                0
+              </span>
+            </Link>
           </li>
         </ul>
 
