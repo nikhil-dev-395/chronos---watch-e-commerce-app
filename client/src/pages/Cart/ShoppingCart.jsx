@@ -90,7 +90,7 @@ const ShoppingCart = () => {
         >
           <Cart />
         </div>
-        <div id="right" className="pt-10">
+        <div id="right" className="pt-11">
           <Checkout />
         </div>
       </div>
