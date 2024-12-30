@@ -1,8 +1,4 @@
-import {
-  Cancel01Icon,
-  FavouriteIcon,
-  ShoppingBasketAdd02Icon,
-} from "hugeicons-react";
+import { Cancel01Icon } from "hugeicons-react";
 
 const Cart = ({
   image = "/Images/watch.png",
@@ -12,7 +8,7 @@ const Cart = ({
   price = "0",
 }) => {
   return (
-    <section className="bg-slate-950 border border-slate-900 w-full max-w-[270px] max-h-[470px] sm:max-w-[200px] sm:max-h-[400px] lg:max-w-[270px] lg:max-h-[470px] rounded-3xl mx-auto">
+    <section className="bg-slate-950 border border-slate-900 w-full h-auto max-w-[270px] max-h-[400px] sm:max-w-[200px] sm:max-h-[400px] lg:max-w-[270px]  rounded-3xl mx-auto ">
       <div className="bg-slate-900 w-full h-auto p-2 rounded-3xl">
         <div className="flex justify-between items-center">
           {limited && (
@@ -51,7 +47,7 @@ const Cart = ({
 
         {/* strap size */}
         <div className="">
-          {/* use this for strap size */}
+          {/*TODO :  use this for strap size */}
           {/* <label htmlFor="size" className="py-3 pr-5 sm:text-xs">
             strap size
           </label>
