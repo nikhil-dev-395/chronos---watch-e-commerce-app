@@ -42,7 +42,7 @@ const Cart = ({
       {/* outside the cart compo div */}
       <div className="px-3 flex flex-wrap gap-3 capitalize">
         {/* strap */}
-        <div className="">
+        <div className="pt-3">
           <h3 className="capitalize sm:text-xs">strap</h3>
           <p className="text-xs text-slate-500 capitalize sm:text-[10px]">
             lourisian alligator leather
@@ -51,7 +51,8 @@ const Cart = ({
 
         {/* strap size */}
         <div className="">
-          <label htmlFor="size" className="py-3 pr-5 sm:text-xs">
+          {/* use this for strap size */}
+          {/* <label htmlFor="size" className="py-3 pr-5 sm:text-xs">
             strap size
           </label>
           <select
@@ -62,7 +63,14 @@ const Cart = ({
             <option value="22cm">22cm</option>
             <option value="12cm">12cm</option>
             <option value="16cm">16cm</option>
-          </select>
+          </select> */}
+
+          <div className="md:pt-3 md:pl-2">
+            <h3 className="capitalize sm:text-xs ">strap size</h3>
+            <p className="text-xs text-slate-500 capitalize sm:text-[10px]">
+              22 cm
+            </p>
+          </div>
         </div>
 
         {/* buckle */}

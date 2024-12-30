@@ -4,14 +4,14 @@ import { Contact02Icon, ContactIcon } from "hugeicons-react";
 
 const ShoppingCart = () => {
   return (
-    <section className="w-full max-w-[90%] h-full py-4  mx-auto">
+    <section className="w-full md:max-w-[90%] max-w-[95%] h-full py-4  mx-auto">
       <h1 className="text-3xl font-thin uppercase">shopping cart</h1>
 
       {/* cartContainer our cart and billing section will be avail...  */}
       <div className="grid grid-cols-2 h-full pt-4" id="cartContainer">
         <div
           id="left"
-          className=" flex flex-wrap h-screen  overflow-y-auto gap-y-7 md:gap-y-5 hide-scrollbar py-3"
+          className=" flex flex-wrap h-screen  overflow-y-auto gap-y-7 md:gap-y-5 hide-scrollbar md:py-3 mt-6 md:mt-3"
         >
           <Cart />
           <Cart />
@@ -30,26 +30,26 @@ const ShoppingCart = () => {
               <h1 className="text-gray-400 md:uppercase capitalize text-sm tracking-widest">
                 Tax (18%)
               </h1>
-              <span className="text-white font-thin text-xs">₹ 10,894</span>
+              <span className="text-white font-thin text-xs">₹ 894</span>
             </div>
 
             {/* Total Exclusive of Tax */}
             <div className="flex justify-between  pb-3 mb-3">
               <h1 className="text-gray-400 md:uppercase capitalize md:text-sm text-xs tracking-widest">
-                Total excl. tax
+                Total excl.tax
               </h1>
               <span className="text-white font-thin md:text-sm text-xs">
-                ₹ 1,28,894
+                ₹ 1,894
               </span>
             </div>
 
             {/* Total Inclusive of Tax */}
             <div className="flex justify-between gap-1">
-              <h1 className="text-gray-200 md:uppercase capitalize md:text-lg text-xs ">
-                Total incl. tax
+              <h1 className="text-green-400 md:uppercase capitalize md:text-lg text-xs font-mono ">
+                Total incl.tax
               </h1>
-              <span className="text-sky-50 font-bold md:text-lg text-xs">
-                ₹ 1,39,788
+              <span className="text-green-400 font-bold md:text-lg text-xs">
+                ₹ 1,788
               </span>
             </div>
 
@@ -65,7 +65,7 @@ const ShoppingCart = () => {
                 <span className="flex md:text-xl text-[11px] pt-4 uppercase gap-4 items-center py-3 md:py-0">
                   {" "}
                   direct contact
-                  <ContactIcon  />
+                  <ContactIcon />
                 </span>
                 <a href="tel:9359480462">
                   <img
