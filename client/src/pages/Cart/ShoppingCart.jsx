@@ -80,14 +80,17 @@ const ShoppingCart = () => {
         checkout section
       </a>
       {/* cartContainer our cart and billing section will be avail...  */}
-      <div className="grid md:grid-cols-2 h-full pt-4 md:pt-0" id="cartContainer">
+      <div
+        className="grid md:grid-cols-2 h-full pt-4 md:pt-0"
+        id="cartContainer"
+      >
         <div
           id="left"
-          className=" flex flex-wrap h-screen  overflow-y-auto gap-y-7 md:gap-y-5 hide-scrollbar md:py-3 mt-6 md:mt-3"
+          className=" flex flex-wrap h-auto  overflow-y-auto gap-y-7 md:gap-y-5 hide-scrollbar md:py-3 mt-6 md:mt-3"
         >
           <Cart />
         </div>
-        <div id="right" className="">
+        <div id="right" className="pt-10">
           <Checkout />
         </div>
       </div>
