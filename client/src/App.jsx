@@ -7,6 +7,7 @@ import Footer from "./pages/Footer/Footer.jsx";
 import WatchPage from "./pages/watch/WatchPage.jsx";
 import ShoppingCart from "./pages/Cart/ShoppingCart.jsx";
 import WatchDetails from "./components/watch/WatchDetails.jsx";
+import StorePage from "./pages/Store/StorePage.jsx";
 const App = () => {
   return (
     <div className="bg-[#050811] cursor-default text-white">
@@ -17,6 +18,7 @@ const App = () => {
           <Route element={<ShoppingCart />} path="/ShoppingCart" />
           <Route element={<WatchPage />} path="/watches" />
           <Route element={<WatchDetails />} path="/WatchDetails" />
+          <Route element={<StorePage />} path="/stores" />
         </Routes>
         <Footer />
       </BrowserRouter>
