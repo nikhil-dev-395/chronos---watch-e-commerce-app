@@ -77,7 +77,7 @@ const Footer = () => {
               <li className="md:pb-5 ">
                 chaitanya colony, yashoda nagar, amt, 444606
               </li>
-              <li className="pb-3 text-blue-500">nikhilw395@gmail.com</li>
+              <li className="md:pb-3 text-blue-500">nikhilw395@gmail.com</li>
               <li className=" text-blue-500">+91 9395480462</li>
             </ul>
           </div>

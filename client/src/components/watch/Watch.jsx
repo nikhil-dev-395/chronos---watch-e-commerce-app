@@ -31,45 +31,7 @@ const Watch = ({ image, limited, model, name, price }) => {
           </p>
         </div>
 
-        {/* outside the Watch compo div */}
-        <div className="px-3 flex flex-wrap gap-3 capitalize">
-          {/* strap */}
-          <div className="pt-3">
-            <h3 className="capitalize sm:text-xs">strap</h3>
-            <p className="text-xs text-slate-500 capitalize sm:text-[10px]">
-              lourisian alligator leather
-            </p>
-          </div>
-
-          {/* strap size */}
-          <div className="">
-            <div className="md:pt-3 md:pl-2">
-              <label htmlFor="size" className="py-3 pr-5 sm:text-xs">
-                strap size
-              </label>
-              <select
-                name="size"
-                id=""
-                className="bg-slate-300 text-black rounded-xl px-2 py-2 outline-none text-xs sm:text-[10px]"
-              >
-                <option value="22cm">22cm</option>
-                <option value="12cm">12cm</option>
-                <option value="16cm">16cm</option>
-              </select>
-            </div>
-          </div>
-
-          {/* buckle */}
-          <div className="">
-            <h3 className="sm:text-xs">buckle</h3>
-            <p className="text-xs text-slate-500 sm:text-[10px]">
-              lourisian alligator leather
-            </p>
-          </div>
-        </div>
-        <div className="text-sky-600 font-semibold text-xl sm:text-lg pt-3 pb-2 px-4">
-          {price || "price yet to decide"} ₹
-        </div>
+        <h2 className="text-green-600 px-3 py-2 font-bold  ">₹ {price} </h2>
       </section>
     </>
   );

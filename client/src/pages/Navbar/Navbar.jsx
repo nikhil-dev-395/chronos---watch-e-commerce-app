@@ -32,6 +32,7 @@ const Navbar = () => {
         <h2 className="font-bold text-[2rem] uppercase text-white">chronos</h2>
 
         <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase hidden md:flex">
+          <NavItem path="/" label="home" />
           <NavItem path="/watches" label="watches" />
           <NavItem path="/warranty" label="warranty & services" />
           <NavItem path="/stores" label="stores" />
@@ -89,8 +90,9 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* mobile device navbar */}
       {isMenuOpen && (
-        <div className=" w-full h-screen md:hidden ">
+        <div className=" w-full h-screen md:hidd">
           <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-8 ">
             <NavItem onClick={() => setMenuOpen(false)} path="/" label="home" />
             <NavItem
