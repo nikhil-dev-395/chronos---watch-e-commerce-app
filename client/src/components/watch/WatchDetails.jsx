@@ -1,6 +1,9 @@
 import { Comment01Icon, FavouriteIcon, Share03Icon } from "hugeicons-react";
+import { useLocation } from "react-router-dom";
 
 const WatchDetails = () => {
+  const { state } = useLocation();
+  // const { image, limited, model, name, price } = state;
   return (
     <>
       <section className="w-full h-auto bg-slate-800">
@@ -13,7 +16,7 @@ const WatchDetails = () => {
                 <p className="uppercase text-white font-sans pb-5 md:text-4xl text-2xl font-semibold leading-tight">
                   flying grand regulator skeleton cowboy
                 </p>
-                <button className="bg-[#e6a157] hover:bg-yellow-700 px-6 py-2 rounded-2xl uppercase text-black">
+                <button className="bg-primaryButton hover:bg-yellow-700 px-6 py-2 rounded-2xl uppercase text-black">
                   buy now
                 </button>
 
@@ -21,6 +24,8 @@ const WatchDetails = () => {
                   {" "}
                   ₹ 230
                 </h2>
+
+    
               </div>
             </div>
             <div className="">
@@ -51,6 +56,8 @@ const WatchDetails = () => {
               </ul>
             </div>
           </div>
+
+
         </div>
 
         {/* information  and suggestion*/}

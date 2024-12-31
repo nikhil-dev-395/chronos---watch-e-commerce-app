@@ -23,12 +23,12 @@ const Home = () => {
           {/* Watch Details */}
           <div className="text-white pt-8 flex flex-col items-start space-y-4">
             <div className="text-sm text-gray-400">CH-6725S-BKGO</div>
-            <p className="uppercase text-white font-sans pb-5 md:text-5xl text-2xl font-light leading-tight">
+            <p className="uppercase text-white font-sans pb-5 md:text-5xl text-2xl font-bold leading-tight">
               flying grand regulator skeleton cowboy
             </p>
             <Link
               to="/findMoreWatch"
-              className="bg-sky-500 px-6 py-2 rounded-2xl capitalize text-black"
+              className="bg-primaryButton px-6 py-2 rounded-2xl capitalize text-black"
             >
               find More Watch
             </Link>
@@ -67,9 +67,6 @@ const Home = () => {
             <SquareArrowRight01Icon color="white" />
           </div>
         </div>
-
-
-
 
         <History />
       </section>

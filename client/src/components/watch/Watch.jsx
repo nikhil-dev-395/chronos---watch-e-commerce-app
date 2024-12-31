@@ -1,9 +1,25 @@
 import { FavouriteIcon, ShoppingBasketAdd02Icon } from "hugeicons-react";
+import { useNavigate } from "react-router-dom";
 
 const Watch = ({ image, limited, model, name, price }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/WatchDetails", {
+      state: {
+        image,
+        limited,
+        model,
+        name,
+        price,
+      } /* TODO : remember to handle this by using redux */,
+    });
+  };
   return (
     <>
-      <section className="bg-slate-950 border border-slate-900 w-full h-auto max-w-[270px] max-h-[450px] sm:max-w-[200px] sm:max-h-[410px] lg:max-w-[310px]  rounded-3xl mx-auto ">
+      <section
+        onClick={handleClick}
+        className="bg-slate-950 border border-slate-900 w-full h-auto max-w-[270px] max-h-[450px] sm:max-w-[200px] sm:max-h-[410px] lg:max-w-[310px]  rounded-3xl mx-auto "
+      >
         <div className="bg-slate-900 w-full h-auto p-2 rounded-3xl">
           <div className="flex justify-between items-center">
             {limited && (
