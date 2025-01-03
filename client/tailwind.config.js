@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primaryButton: "#e6a157",
+        primaryBg: "#050811",
       },
     },
   },

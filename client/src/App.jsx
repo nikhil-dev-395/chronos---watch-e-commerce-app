@@ -6,11 +6,11 @@ import Navbar from "./pages/Navbar/Navbar.jsx";
 import Footer from "./pages/Footer/Footer.jsx";
 import WatchPage from "./pages/watch/WatchPage.jsx";
 import ShoppingCart from "./pages/Cart/ShoppingCart.jsx";
-import WatchDetails from "./components/watch/WatchDetails.jsx";
+import WatchDetails from "./pages/watch/WatchDetails.jsx";
 import StorePage from "./pages/Store/StorePage.jsx";
 const App = () => {
   return (
-    <div className="bg-[#050811] cursor-default text-white">
+    <div className="bg-primaryBg cursor-default text-white">
       <BrowserRouter>
         <Navbar />
         <Routes>

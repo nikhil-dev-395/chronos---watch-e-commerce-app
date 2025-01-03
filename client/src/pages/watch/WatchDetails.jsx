@@ -1,22 +1,33 @@
 import {
   Comment01Icon,
   FavouriteIcon,
+  NewReleasesIcon,
   Share03Icon,
   ShoppingBasketAdd02Icon,
+  StarIcon,
+  ThumbsDownIcon,
+  ThumbsUpIcon,
 } from "hugeicons-react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Reviews } from "../../components/reviews/Reviews.jsx";
 
 const WatchDetails = () => {
-  const { state } = useLocation();
-  // const { image, limited, model, name, price } = state;
+  // const { state } = useLocation();
+  //  const { image, limited, model, name, price } = state;
   return (
     <>
       <section className="w-full h-auto bg-slate-800">
-        <div className="bg-[#050811]  w-full h-auto rounded-b-[50px]">
+        <div className="bg-primaryBg  w-full h-auto rounded-b-[50px]">
           <div className="grid md:grid-cols-3 max-w-[90%] w-full h-screen mx-auto ">
             <div className="">
+              <small className="text-green-600 uppercase flex items-center gap-3 pt-8">
+                assured <NewReleasesIcon style={{ width: 16, height: 16 }} />
+                <span className="text-yellow-600 capitalize">
+                  <Link to="/seller">nikhil wankhade</Link>
+                </span>
+              </small>
               {/* Watch Details */}
-              <div className="text-white pt-8 flex flex-col items-start md:space-y-4">
+              <div className="text-white pt-3 flex flex-col items-start md:space-y-4">
                 <div className="text-sm text-gray-400 pb-2">CH-6725S-BKGO</div>
                 <p className="uppercase text-white font-sans pb-5 md:text-4xl text-2xl font-semibold leading-tight">
                   flying grand regulator skeleton cowboy
@@ -120,6 +131,10 @@ const WatchDetails = () => {
             </div>
           </div>
         </div>
+
+        {/* reviews  and ratings of product*/}
+
+        <Reviews />
       </section>
     </>
   );

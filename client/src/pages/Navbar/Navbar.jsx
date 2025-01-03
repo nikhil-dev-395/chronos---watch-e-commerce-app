@@ -8,10 +8,11 @@ import {
 } from "hugeicons-react";
 import { Link, useLocation } from "react-router-dom";
 
+/*    for navigating , this is just a reusable component  */
 const NavItem = ({ path, label, onClick }) => {
   const pathLocation = useLocation();
   return (
-    <li className="hover:text-yellow-600">
+    <li className="hover:text-yellow-600 text-3xl md:text-base font-bold">
       <Link
         to={path}
         onClick={onClick}
@@ -23,11 +24,12 @@ const NavItem = ({ path, label, onClick }) => {
   );
 };
 
+/* main navbar component is start from here for desktop to mobile respectively */
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header>
+    <header className="">
       <nav className="w-full max-w-[90%] mx-auto flex items-center justify-between py-6 text-slate-50 text-sm">
         <h2 className="font-bold text-[2rem] uppercase text-white">chronos</h2>
 
@@ -92,7 +94,20 @@ const Navbar = () => {
 
       {/* mobile device navbar */}
       {isMenuOpen && (
-        <div className=" w-full h-screen md:hidd">
+        <div className=" fixed top-0 left-0 w-full h-screen bg-black z-50 ">
+          <div className="flex items-center justify-between w-[90%] mx-auto pt-3">
+            <h2 className="font-bold text-[2rem] uppercase text-white">
+              chronos
+            </h2>
+
+            <div
+              className="block md:hidden"
+              onClick={() => setMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <Cancel01Icon /> : <Menu01Icon />}
+            </div>
+          </div>
+
           <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-8 ">
             <NavItem onClick={() => setMenuOpen(false)} path="/" label="home" />
             <NavItem

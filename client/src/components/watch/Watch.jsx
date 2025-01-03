@@ -18,7 +18,7 @@ const Watch = ({ image, limited, model, name, price }) => {
     <>
       <section
         onClick={handleClick}
-        className="bg-slate-950 border border-slate-900 w-full h-auto max-w-[270px] max-h-[450px] sm:max-w-[200px] sm:max-h-[410px] lg:max-w-[310px]  rounded-3xl mx-auto "
+        className="bg-slate-950 border border-slate-900 w-full h-auto max-w-[90%] max-h-[450px] sm:max-w-[200px] sm:max-h-[410px] lg:max-w-[310px]  rounded-3xl mx-auto "
       >
         <div className="bg-slate-900 w-full h-auto p-2 rounded-3xl">
           <div className="flex justify-between items-center">
