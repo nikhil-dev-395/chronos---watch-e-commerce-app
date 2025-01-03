@@ -33,7 +33,7 @@ export const Reviews = ({
 
             {/* rate button */}
 
-            <div className="pt-10">
+            <div className="pt-4">
               <button className="py-2 px-3 rounded-md bg-blue-500 text-slate-950 font-semibold hover:bg-blue-700">
                 Rate Product
               </button>
@@ -45,7 +45,7 @@ export const Reviews = ({
               <ul>
                 <li className="border-t border-slate-700 py-10">
                   {/* rating */}
-                  <div className="py-2 px-3 bg-green-400 rounded-lg inline-block">
+                  <div className="py-2 px-3 bg-green-400 rounded-lg inline-block mb-1">
                     <span className="flex items-center">
                       <StarIcon color="#000" fill="#000" width={18} />{" "}
                       <small className="text-black font-semibold text-sm px-2">

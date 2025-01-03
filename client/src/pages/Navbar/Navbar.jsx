@@ -94,7 +94,7 @@ const Navbar = () => {
 
       {/* mobile device navbar */}
       {isMenuOpen && (
-        <div className=" fixed top-0 left-0 w-full h-screen bg-black z-50 ">
+        <div className=" fixed top-0 left-0 w-full h-screen  bg-black z-50 ">
           <div className="flex items-center justify-between w-[90%] mx-auto pt-3">
             <h2 className="font-bold text-[2rem] uppercase text-white">
               chronos
