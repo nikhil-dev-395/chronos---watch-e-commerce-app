@@ -125,6 +125,12 @@ const Navbar = () => {
               path="/stores"
               label="stores"
             />
+
+            <NavItem
+              onClick={() => setMenuOpen(false)}
+              path="/user"
+              label="user"
+            />
             {/* favorite */}
             <div className="flex gap-4">
               <NavItem

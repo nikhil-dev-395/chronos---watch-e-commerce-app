@@ -8,6 +8,7 @@ import WatchPage from "./pages/watch/WatchPage.jsx";
 import ShoppingCart from "./pages/Cart/ShoppingCart.jsx";
 import WatchDetails from "./pages/watch/WatchDetails.jsx";
 import StorePage from "./pages/Store/StorePage.jsx";
+import UserPage from "./pages/user/UserPage.jsx";
 const App = () => {
   return (
     <div className="bg-primaryBg cursor-default text-white">
@@ -19,6 +20,7 @@ const App = () => {
           <Route element={<WatchPage />} path="/watches" />
           <Route element={<WatchDetails />} path="/WatchDetails" />
           <Route element={<StorePage />} path="/stores" />
+          <Route element={<UserPage />} path="/user" />
         </Routes>
         <Footer />
       </BrowserRouter>
