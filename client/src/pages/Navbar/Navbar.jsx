@@ -36,7 +36,7 @@ const Navbar = () => {
         <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase hidden md:flex">
           <NavItem path="/" label="home" />
           <NavItem path="/watches" label="watches" />
-          <NavItem path="/warranty" label="warranty & services" />
+          <NavItem path="/warranty&services" label="warranty & services" />
           <NavItem path="/stores" label="stores" />
         </ul>
 
@@ -117,7 +117,7 @@ const Navbar = () => {
             />
             <NavItem
               onClick={() => setMenuOpen(false)}
-              path="/service&warranty"
+              path="/warranty&services"
               label="warranty & services"
             />
             <NavItem

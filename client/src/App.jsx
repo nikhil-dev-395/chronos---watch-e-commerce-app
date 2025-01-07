@@ -8,7 +8,7 @@ import ShoppingCart from "./pages/Cart/ShoppingCart.jsx";
 import WatchDetails from "./pages/watch/WatchDetails.jsx";
 import StorePage from "./pages/Store/StorePage.jsx";
 import UserPage from "./pages/user/UserPage.jsx";
-import ServiceAndWArranty from "./pages/service&Warranty/ServiceAndWArranty.jsx";
+import ServiceAndWArranty from "./pages/warranty&services/ServiceAndWArranty.jsx";
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
           <Route element={<WatchDetails />} path="/WatchDetails" />
           <Route element={<StorePage />} path="/stores" />
           <Route element={<UserPage />} path="/user" />
-          <Route element={<ServiceAndWArranty />} path="/service&warranty" />
+          <Route element={<ServiceAndWArranty />} path="/warranty&services" />
         </Routes>
         <Footer />
       </BrowserRouter>
