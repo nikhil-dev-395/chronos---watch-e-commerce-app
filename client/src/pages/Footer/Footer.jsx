@@ -46,6 +46,7 @@ const Footer = () => {
       links: [
         { to: "/our-history", text: "Our History" },
         { to: "/contact", text: "Contact" },
+        { to: "/careers", text: "Careers" },
       ],
     },
     {
@@ -92,7 +93,7 @@ const Footer = () => {
                       {details.map((detail, index) => (
                         <li
                           key={index}
-                          className={detail.link ? "text-blue-500" : ""}
+                        className={detail.link ? "text-blue-100" : ""}
                         >
                           {detail.link ? (
                             <a
@@ -118,7 +119,7 @@ const Footer = () => {
 
       <div className="text-white w-[90%] mx-auto py-6">
         <ul className="flex justify-between">
-          <li className="uppercase">&copy; 2024 Chronos</li>
+          <li className="uppercase">&copy; 2025 Chronos</li>
           <li className="flex gap-x-3 items-center">
             {socialMedia.map(({ id, url, icon, label }) => (
               <a

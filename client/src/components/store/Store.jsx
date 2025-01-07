@@ -1,7 +1,7 @@
 /* add here search and filter based on city location */
 
 import { FavouriteIcon, NewReleasesIcon, StarIcon } from "hugeicons-react";
-
+import Assured from "../assured/Assured";
 const Store = ({
   image = "/Images/store.jpg",
   location = "chaitany colony , yashoda nagar ,amravati , maharashtra , 4445050",
@@ -13,15 +13,11 @@ const Store = ({
     <>
       <section className="bg-slate-950 border border-slate-900 w-full h-auto max-w-[270px] max-h-[450px] sm:max-w-[200px] sm:max-h-[410px] lg:max-w-[310px]  rounded-3xl mx-auto ">
         <div className="bg-slate-900 w-full h-auto p-2 rounded-3xl">
-          <div className="flex justify-between items-center">
-            <div className="flex gap-x-36 md:gap-x-40 pb-2 items-center px-4">
-              <FavouriteIcon
-                className="text-sky-500 hover:text-sky-400 transition duration-200"
-                style={{ width: 16, height: 16 }}
-              />
-              <small className="text-green-600 uppercase flex items-center gap-3">
-                assured <NewReleasesIcon style={{ width: 16, height: 16 }} />
-              </small>
+          <div className="">
+            <div className="flex   pb-2 items-center  justify-between">
+              <FavouriteIcon className="text-sky-500 hover:text-sky-400 transition duration-200 inline-block" />
+              <Assured to="/user"  />
+              {/* TODO :  currently i am giving a /user url but change it later after adding redux and backend*/}
             </div>
           </div>
           <div className="flex justify-center">

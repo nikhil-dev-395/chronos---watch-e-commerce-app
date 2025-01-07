@@ -2,7 +2,6 @@ import React from "react";
 import Assured from "../../components/assured/Assured";
 import {
   Call02Icon,
-  Comment01Icon,
   FavouriteIcon,
   Mail01Icon,
   Share03Icon,

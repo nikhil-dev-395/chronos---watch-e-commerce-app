@@ -108,7 +108,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <ul className="gap-x-7 text-[1rem] text-slate-300 uppercase flex flex-col px-10 py-8 justify-center gap-y-8 ">
+          <ul className=" text-[1rem] text-slate-300 uppercase flex flex-col px-6 py-8 justify-center gap-y-8 ">
             <NavItem onClick={() => setMenuOpen(false)} path="/" label="home" />
             <NavItem
               onClick={() => setMenuOpen(false)}
@@ -117,7 +117,7 @@ const Navbar = () => {
             />
             <NavItem
               onClick={() => setMenuOpen(false)}
-              path="/warranty"
+              path="/service&warranty"
               label="warranty & services"
             />
             <NavItem
