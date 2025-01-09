@@ -1,34 +1,33 @@
-import React from "react";
-import Assured from "../../components/assured/Assured";
 import {
   Call02Icon,
   FavouriteIcon,
+  InformationSquareIcon,
+  InstagramIcon,
+  Linkedin01Icon,
+  ListViewIcon,
+  Location01Icon,
   Mail01Icon,
+  NewJobIcon,
+  NewTwitterIcon,
+  NewTwitterRectangleIcon,
   Share03Icon,
+  StarIcon,
+  WorkHistoryIcon,
 } from "hugeicons-react";
+import React from "react";
 
 const UserPage = () => {
   const mobileNumber = 9359480462;
   const MyEmail = "nikhilw395@gmail.com";
 
-  // Statistics
-  const stats = [
-    { label: "Sells", value: "10k" },
-    { label: "Purchased", value: "10k" },
-    { label: "Deliveries", value: "10k" },
-    { label: "Successful", value: "10k" },
-    { label: "Unsuccessful", value: "10k" },
-  ];
-
   // Social Media Icons
   const socialIcons = [
-    { key: "share", Icon: Share03Icon, label: "Share" },
-    { key: "favourite", Icon: FavouriteIcon, label: "Favourite" },
+    { key: "Instagram", Icon: InstagramIcon, label: "Instagram" },
+    { key: "Linkedin", Icon: Linkedin01Icon, label: "Linkedin" },
     {
-      key: "email",
-      Icon: Mail01Icon,
-      label: "Email",
-      anchor: `mailto:${MyEmail}`,
+      key: "NewTwitterIcon",
+      Icon: NewTwitterRectangleIcon,
+      label: "NewTwitterIcon",
     },
     {
       key: "call",
@@ -38,87 +37,225 @@ const UserPage = () => {
     },
   ];
 
+  // Dummy Data for Orders and Wishlist
+  const orders = [
+    {
+      id: 1,
+      productName: "Classic Leather Watch",
+      date: "2023-10-01",
+      status: "Delivered",
+    },
+    {
+      id: 2,
+      productName: "Sport Smartwatch",
+      date: "2023-09-25",
+      status: "Pending",
+    },
+  ];
+
+  const wishlist = [
+    { id: 1, name: "Luxury Gold Watch", image: "/Images/watch.png" },
+    { id: 2, name: "Minimalist Silver Watch", image: "/Images/watch.png" },
+  ];
+
+  // Dummy Data for Saved Addresses
+  const savedAddresses = [
+    { id: 1, type: "Home", address: "123 Main St, City, Country" },
+    { id: 2, type: "Office", address: "456 Business Rd, City, Country" },
+  ];
+
   return (
-    <section className="w-full min-h-screen  text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-14 w-full max-w-[85%] mx-auto">
-        {/* Left Section - Information */}
-        <article>
-          <h1 className="text-[3.5rem] uppercase font-bold font-mono  text-white">
-            Nikhil
-          </h1>
-          <p className="text-2xl uppercase font-semibold">Wankhade</p>
-
-          <h4 className="text-lg font-medium mt-4">Wankhade Watch Center</h4>
-          <p className="text-gray-300 mt-1">
-            Chaitanya Colony, Yashoda Nagar, Amravati, 44004
-          </p>
-          <small className="text-orange-400 capitalize font-serif block mt-2">
-            Seller
-          </small>
-
-          {/* Assured Tag */}
-          <Assured to="/user" />
-
-          {/* Introduction */}
-          <p className="pt-8 text-sm leading-relaxed text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            cumque saepe consequatur fuga quibusdam amet expedita explicabo
-            quasi tempora laborum blanditiis officia fugiat non totam, porro
-            eaque similique dolore perspiciatis?
-          </p>
-        </article>
-
-        {/* Right Section - Profile & Social Media */}
-        <aside className="flex flex-col items-center md:ml-20 gap-10">
+    <section className="w-full h-full  ">
+      <div className="max-w-[90%] md:max-w-[80%] h-auto mx-auto py-10">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Profile Image */}
-          <div className="relative w-[90%] md:w-2/3 h-[300px] rounded-[30px] overflow-hidden shadow-lg">
-            <img
-              src="/Images/profile.jpg"
-              alt="User Profile"
-              className="w-full  "
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
+          <div className="mb-6 md:mb-0">
+            <div className="rounded-full">
+              <img
+                src="/Images/profile.jpg"
+                alt="Profile"
+                className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
+              />
+            </div>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex  gap-6 pb-10">
-            {socialIcons.map(({ key, Icon, label, anchor }) =>
-              anchor ? (
-                <a
-                  key={key}
-                  href={anchor}
-                  className="hover:scale-110 transition-transform  p-3 rounded-full shadow-lg"
-                  aria-label={label}
-                >
-                  <Icon className="text-white hover:text-purple-400 text-2xl" />
-                </a>
-              ) : (
-                <button
-                  key={key}
-                  className="hover:scale-110 transition-transform  p-3 rounded-full "
-                  aria-label={label}
-                >
-                  <Icon className="text-white hover:text-purple-400 text-2xl" />
+          {/* User Details */}
+          <div className="flex-1 md:ml-32 w-full ">
+            <h2 className="text-2xl md:text-3xl font-semibold font-sans capitalize text-center md:text-left">
+              nikhil wankhade
+              <span className="text-xs text-slate-500 pl-2">m</span>
+            </h2>
+
+            {/* Social Icons */}
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center pt-5">
+              {socialIcons.map(({ key, Icon, label, anchor }) =>
+                anchor ? (
+                  <a
+                    key={key}
+                    href={anchor}
+                    className="px-2 border-2 inline-block py-2 rounded-full"
+                    aria-label={label}
+                  >
+                    <Icon className="text-white text-2xl hover:text-slate-600" />
+                  </a>
+                ) : (
+                  <button
+                    key={key}
+                    className="px-2 border-2 inline-block py-2 rounded-full"
+                    aria-label={label}
+                  >
+                    <Icon className="text-white text-2xl hover:text-slate-600" />
+                  </button>
+                )
+              )}
+
+              <div className="flex gap-4 mt-4 md:mt-0">
+                <button className="py-2 px-4 md:px-6 rounded-3xl bg-black text-white border flex items-center gap-x-2">
+                  <span className="text-lg md:text-xl capitalize">Message</span>
+                  <Mail01Icon width={20} />
                 </button>
-              )
-            )}
+                <button className="py-2 px-4 md:px-6 rounded-3xl text-black bg-white border-2 border-slate-950">
+                  Settings
+                </button>
+              </div>
+            </div>
+
+            {/* Skills and Roles */}
+            <div className="pt-6 md:pt-9 flex flex-row justify-center md:justify-stretch md:flex-row gap-4 md:gap-x-10 text-center md:text-left">
+              <div className="capitalize">
+                <h4 className="text-lg text-slate-400">Role</h4>
+                <span className="text-2xl font-semibold">User</span>
+              </div>
+              <div className="capitalize">
+                <h4 className="text-lg text-slate-400">Experience</h4>
+                <span className="text-2xl font-semibold">10 years</span>
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="pt-6">
+              <ul className="flex flex-wrap gap-4 justify-center md:justify-start">
+                <li className="py-2 px-3 bg-slate-200 rounded-2xl inline-block text-lg">
+                  <div className="flex items-center gap-x-2 text-black font-semibold">
+                    <StarIcon width={18} />
+                    <span>Unsuccessful</span>
+                    <span className="text-slate-600">3</span>
+                  </div>
+                </li>
+                <li className="py-2 px-3 bg-slate-200 rounded-2xl inline-block text-lg">
+                  <div className="flex items-center gap-x-2 text-black font-semibold">
+                    <StarIcon width={18} />
+                    <span>Successful</span>
+                    <span className="text-slate-600">7</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </aside>
-        {/* Statistics */}
-        <div className="pb-10">
-          <ul className="flex flex-wrap md:flex-nowrap gap-6">
-            {stats.map((stat, index) => (
+        </div>
+
+        {/* Order History Section */}
+        <div className="pt-9 md:10">
+          <h3 className="text-2xl font-semibold mb-4 text-center md:text-left   flex gap-x-3 items-center text-blue-50">
+            Order History
+            <WorkHistoryIcon />
+          </h3>
+          <ul className="space-y-4">
+            {orders.map((order) => (
+              <li key={order.id} className="p-4 border rounded-lg   shadow-sm">
+                <div className="flex flex-col md:flex-row justify-between items-center">
+                  <span className="text-lg font-medium">
+                    {order.productName}
+                  </span>
+                  <span
+                    className={`text-slate-600 ${
+                      order.status === "Delivered"
+                        ? "text-yellow-600"
+                        : "text-green-600"
+                    }`}
+                  >
+                    {order.status}
+                  </span>
+                </div>
+                <div className="text-slate-500 text-center md:text-left">
+                  {order.date}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Wishlist Section */}
+        <div className="md:pt-6 pt-10">
+          <h3 className="text-2xl font-semibold mb-4 text-center md:text-left text-blue-50 flex items-center gap-x-3">
+            Wishlist
+            <ListViewIcon  width={18}/>
+          </h3>
+          <ul className="flex flex-wrap gap-6">
+            {wishlist.map((item) => (
               <li
-                key={index}
-                className="text-center flex flex-col items-center  px-6 py-4 rounded-lg  hover: transition-transform border border-slate-700"
+                key={item.id}
+                className="p-6 bg-gray-950 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 mx-auto md:mx-0"
               >
-                <span className="text-lg font-bold text-white">
-                  {stat.label}
-                </span>
-                <small className="text-purple-400 text-xl font-semibold">
-                  {stat.value}
-                </small>
+                {/* Product Image */}
+                <div className="relative w-full h-48 overflow-hidden rounded-lg">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Product Name */}
+                <div className="mt-4 text-lg font-semibold text-gray-100 text-center">
+                  {item.name}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="mt-4 flex justify-center gap-3">
+                  <button className="px-4 py-2 bg-blue-50 text-black rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block">
+                    Add to Cart
+                  </button>
+                  <button className="px-4 py-2 bg-red-200 text-black rounded-lg hover:bg-red-700 transition-colors duration-200">
+                    Remove
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Saved Addresses Section */}
+        <div className="md:pt-6 pt-10">
+          <h3 className="text-2xl font-semibold mb-6 flex items-center gap-x-3 text-blue-50 md:justify-start">
+            Saved Addresses <Location01Icon  />
+          </h3>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {savedAddresses.map((address) => (
+              <li
+                key={address.id}
+                className="p-6 bg-gray-950  text-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              >
+                <div className="flex items-center gap-x-3 mb-4">
+                  <div className="p-2 bg-blue-50 rounded-full">
+                    <Location01Icon className="w-6 h-6 text-slate-800" />
+                  </div>
+                  <div className="text-lg font-semibold text-gray-100">
+                    {address.type}
+                  </div>
+                </div>
+                <div className="text-slate-300 text-sm leading-relaxed">
+                  {address.address}
+                </div>
+                <div className="mt-4 flex gap-3">
+                  <button className="text-sm text-blue-200 hover:text-blue-600 transition-colors duration-200">
+                    Edit
+                  </button>
+                  <button className="text-sm text-red-300 hover:text-red-600 transition-colors duration-200">
+                    Delete
+                  </button>
+                </div>
               </li>
             ))}
           </ul>

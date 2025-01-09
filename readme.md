@@ -62,12 +62,6 @@ Chronos is a modern e-commerce platform for luxury watches. It offers a seamless
 
 ---
 
-## Why Netlify?
-
-Netlify was chosen for deployment due to its **fast build times** and **global CDN**, ensuring a smooth user experience. However, there are occasional issues with **image and video loading**, which are being investigated and optimized.
-
----
-
 ## Installation
 
 To run this project locally, follow these steps:
