@@ -116,7 +116,7 @@ const UserPage = () => {
                   <Mail01Icon width={20} />
                 </button>
                 <button className="py-2 px-4 md:px-6 rounded-3xl text-black bg-white border-2 border-slate-950">
-                  Settings
+                  Edit
                 </button>
               </div>
             </div>
