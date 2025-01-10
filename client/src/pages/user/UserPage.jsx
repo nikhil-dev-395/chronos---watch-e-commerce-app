@@ -163,23 +163,34 @@ const UserPage = () => {
           </h3>
           <ul className="space-y-4">
             {orders.map((order) => (
-              <li key={order.id} className="p-4 border rounded-lg   shadow-sm">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                  <span className="text-lg font-medium">
-                    {order.productName}
+              <li
+                key={order.id}
+                className="p-6 "
+              >
+                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                  {/* Order Number */}
+                  <span className="text-indigo-100 text-lg font-bold   py-2 rounded-full">
+                    {order.id}
                   </span>
+
+                  {/* Product Name and Date */}
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-semibold text-white">
+                      {order.productName}
+                    </h3>
+                    <p className="text-slate-400 mt-1">{order.date}</p>
+                  </div>
+
+                  {/* Status with Dynamic Color */}
                   <span
-                    className={`text-slate-600 ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold ${
                       order.status === "Delivered"
-                        ? "text-yellow-600"
-                        : "text-green-600"
+                        ? "bg-yellow-500/10 text-yellow-500"
+                        : "bg-green-500/10 text-green-500"
                     }`}
                   >
                     {order.status}
                   </span>
-                </div>
-                <div className="text-slate-500 text-center md:text-left">
-                  {order.date}
                 </div>
               </li>
             ))}
@@ -190,7 +201,7 @@ const UserPage = () => {
         <div className="md:pt-6 pt-10">
           <h3 className="text-2xl font-semibold mb-4 text-center md:text-left text-blue-50 flex items-center gap-x-3">
             Wishlist
-            <ListViewIcon  width={18}/>
+            <ListViewIcon width={18} />
           </h3>
           <ul className="flex flex-wrap gap-6">
             {wishlist.map((item) => (
@@ -214,10 +225,10 @@ const UserPage = () => {
 
                 {/* Action Buttons */}
                 <div className="mt-4 flex justify-center gap-3">
-                  <button className="px-4 py-2 bg-blue-50 text-black rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block">
+                  <button className="px-4 py-2 bg-blue-500/10 text-blue-200  rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block">
                     Add to Cart
                   </button>
-                  <button className="px-4 py-2 bg-red-200 text-black rounded-lg hover:bg-red-700 transition-colors duration-200">
+                  <button className="px-4 py-2 bg-red-500/50 text-red-300 rounded-lg hover:bg-red-700 transition-colors duration-200">
                     Remove
                   </button>
                 </div>
@@ -229,13 +240,13 @@ const UserPage = () => {
         {/* Saved Addresses Section */}
         <div className="md:pt-6 pt-10">
           <h3 className="text-2xl font-semibold mb-6 flex items-center gap-x-3 text-blue-50 md:justify-start">
-            Saved Addresses <Location01Icon  />
+            Saved Addresses <Location01Icon />
           </h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {savedAddresses.map((address) => (
               <li
                 key={address.id}
-                className="p-6 bg-gray-950  text-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+                className="p-6 bg-gray-950  text-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 "
               >
                 <div className="flex items-center gap-x-3 mb-4">
                   <div className="p-2 bg-blue-50 rounded-full">
