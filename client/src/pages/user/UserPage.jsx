@@ -10,7 +10,9 @@ import {
   NewJobIcon,
   NewTwitterIcon,
   NewTwitterRectangleIcon,
+  Remove01Icon,
   Share03Icon,
+  ShoppingBasketAdd02Icon,
   StarIcon,
   WorkHistoryIcon,
 } from "hugeicons-react";
@@ -163,10 +165,7 @@ const UserPage = () => {
           </h3>
           <ul className="space-y-4">
             {orders.map((order) => (
-              <li
-                key={order.id}
-                className="p-6 "
-              >
+              <li key={order.id} className="p-6 ">
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                   {/* Order Number */}
                   <span className="text-indigo-100 text-lg font-bold   py-2 rounded-full">
@@ -226,10 +225,10 @@ const UserPage = () => {
                 {/* Action Buttons */}
                 <div className="mt-4 flex justify-center gap-3">
                   <button className="px-4 py-2 bg-blue-500/10 text-blue-200  rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block">
-                    Add to Cart
+                    <ShoppingBasketAdd02Icon />
                   </button>
-                  <button className="px-4 py-2 bg-red-500/50 text-red-300 rounded-lg hover:bg-red-700 transition-colors duration-200">
-                    Remove
+                  <button className="px-4 py-2 bg-red-500/50 text-red-100 rounded-lg hover:bg-red-700 transition-colors duration-200">
+                    <Remove01Icon />
                   </button>
                 </div>
               </li>
