@@ -22,6 +22,7 @@ import {
   watchImagePath,
 } from "../../constants/FileNameConstants";
 import { Link } from "react-router-dom";
+import OrdersTable from "../../components/order/OrderTable";
 
 const UserPage = () => {
   const mobileNumber = 9359480462;
@@ -173,70 +174,7 @@ const UserPage = () => {
           <div className="overflow-x-auto max-h-[400px]">
             {" "}
             {/* Adjust max-height as needed */}
-            <table className="min-w-[90%] table-auto border-collapse border border-gray-700 text-left text-sm text-white">
-              <thead>
-                <tr className="bg-gray-800 text-indigo-100">
-                  <th className="px-4 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
-                    Order Number
-                  </th>
-                  <th className="px-4 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
-                    Product Name
-                  </th>
-                  <th className="px-4 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
-                    Date
-                  </th>
-                  <th className="px-6 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
-                    Product Link
-                  </th>
-                  <th className="px-6 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
-                    Status
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {orders.map((order) => (
-                  <tr key={order.id} className="border-b border-gray-700">
-                    {/* Order Number */}
-                    <td className="px-4 py-3 font-bold text-indigo-100 whitespace-nowrap">
-                      {order.id}
-                    </td>
-
-                    {/* Product Name */}
-                    <td className="px-4 py-3 whitespace-nowrap">
-                      <h3 className="text-lg font-semibold">
-                        {order.productName}
-                      </h3>
-                    </td>
-
-                    {/* Date */}
-                    <td className="px-4 py-3 text-slate-400 whitespace-nowrap">
-                      {order.date}
-                    </td>
-                    {/* product link */}
-                    <td className="px-7 py-3 text-slate-400 whitespace-nowrap">
-                      <Link
-                        to={order.productLink}
-                        className="text-blue-800 hover:text-blue-500"
-                      >
-                        product link
-                      </Link>
-                    </td>
-                    {/* Status with Dynamic Color */}
-                    <td className="px-4 py-3 whitespace-nowrap">
-                      <span
-                        className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                          order.status === "Delivered"
-                            ? "bg-yellow-500/10 text-yellow-500"
-                            : "bg-green-500/10 text-green-500"
-                        }`}
-                      >
-                        {order.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <OrdersTable orders={orders} />
           </div>
         </div>
 
