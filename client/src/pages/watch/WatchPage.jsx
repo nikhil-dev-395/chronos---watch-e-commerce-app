@@ -6,46 +6,47 @@ import {
   SquareArrowDown01Icon,
 } from "hugeicons-react";
 import Watch from "../../components/watch/Watch";
+import { watchImagePath } from "../../constants/FileNameConstants";
 const WatchPage = () => {
   // Array of watches
   const watches = [
     {
-      image: "/Images/watch.png",
+      image:  watchImagePath ,
       limited: 15,
       model: "CH-6725S-BKGO",
       name: "flying grand regulator skeleton cowboy",
       price: 100,
     },
     {
-      image: "/Images/watch.png",
+      image:watchImagePath,
       limited: 10,
       model: "CH-4825L-SKWI",
       name: "classic regulator moonphase silver",
       price: 100,
     },
     {
-      image: "/Images/watch.png",
+      image:watchImagePath,
       limited: 20,
       model: "CH-9127M-BRBL",
       name: "modern regulator titanium black",
       price: 100,
     },
     {
-      image: "/Images/watch.png",
+      image:watchImagePath,
       limited: 5,
       model: "CH-8300F-RGLD",
       name: "luxury grand regulator rose gold",
       price: 100,
     },
     {
-      image: "/Images/watch.png",
+      image:watchImagePath,
       limited: 5,
       model: "CH-8300F-RGLD",
       name: "luxury grand regulator rose gold",
       price: 100,
     },
     {
-      image: "/Images/watch.png",
+      image:watchImagePath,
       limited: 5,
       model: "CH-8300F-RGLD",
       name: "luxury grand regulator rose gold",

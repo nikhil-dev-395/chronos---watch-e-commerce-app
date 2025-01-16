@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Video from "../../components/video/Video";
 import { SquareArrowLeft01Icon, SquareArrowRight01Icon } from "hugeicons-react";
 import History from "../../components/history/History";
+import { watchImagePath } from "../../constants/FileNameConstants";
 
 const Home = () => {
   return (
@@ -37,7 +38,7 @@ const Home = () => {
           {/* Live Watch Image */}
           <div className="w-full md:w-[40vw] flex justify-center bg-cover">
             <img
-              src="/Images/watch.png"
+              src={watchImagePath}
               alt="watch"
               className="max-w-full h-auto"
             />

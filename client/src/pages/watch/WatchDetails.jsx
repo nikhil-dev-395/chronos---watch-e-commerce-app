@@ -10,6 +10,7 @@ import {
 } from "hugeicons-react";
 import { Link, useLocation } from "react-router-dom";
 import { Reviews } from "../../components/reviews/Reviews.jsx";
+import { watchImagePath } from "../../constants/FileNameConstants.js";
 
 const WatchDetails = () => {
   // const { state } = useLocation();
@@ -62,7 +63,7 @@ const WatchDetails = () => {
               {/* Live Watch Image */}
               <div className="w-full md:w-[40vw] flex justify-center bg-cover">
                 <img
-                  src="/Images/watch.png"
+                  src={watchImagePath}
                   alt="watch"
                   className="max-w-full h-auto"
                 />
@@ -124,10 +125,10 @@ const WatchDetails = () => {
           <div className="">
             <h3 className="font-bold capitalize py-3"> suggested watch</h3>
             <div className="flex overflow-x-auto hide-scrollbar">
-              <img src="/Images/watch.png" alt="" className="w-32" />
-              <img src="/Images/watch.png" alt="" className="w-32" />
-              <img src="/Images/watch.png" alt="" className="w-32" />
-              <img src="/Images/watch.png" alt="" className="w-32" />
+              <img src={watchImagePath} alt="" className="w-32" />
+              <img src={watchImagePath} alt="" className="w-32" />
+              <img src={watchImagePath} alt="" className="w-32" />
+              <img src={watchImagePath} alt="" className="w-32" />
             </div>
           </div>
         </div>

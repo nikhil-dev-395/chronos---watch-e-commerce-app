@@ -1,5 +1,5 @@
 import { Search01Icon } from "hugeicons-react";
-
+import { serviceImagePath } from "../../constants/FileNameConstants";
 const ServicesCard = ({ heading, innerTextsToShow }) => {
   return (
     <div className="w-full md:w-[48%] lg:w-[31.5%] bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
@@ -17,7 +17,9 @@ const ServiceAndWarranty = () => {
   return (
     <div className="w-[90%] mx-auto">
       {/* Header Section */}
-      <div className="py-10 w-full rounded-xl mb-10 md:flex items-center justify-between bg-[url('/Images/service.jpg')] bg-cover bg-center md:p-8">
+      <div
+        className={`py-10 w-full rounded-xl mb-10 md:flex items-center justify-between bg-[url('${serviceImagePath}')] bg-cover bg-center md:p-8`}
+      >
         {/* Text Section */}
         <div className="md:w-1/2">
           <h1 className="text-3xl md:text-4xl font-bold uppercase  font-sans mb-6">

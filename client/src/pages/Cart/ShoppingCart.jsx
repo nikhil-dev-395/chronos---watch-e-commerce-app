@@ -1,6 +1,7 @@
 import React from "react";
 import Cart from "../../components/shoppingcart/Cart.jsx";
 import { Contact02Icon, ContactIcon } from "hugeicons-react";
+import { profileImagePath } from "../../constants/FileNameConstants.js";
 
 const Checkout = () => {
   return (
@@ -55,7 +56,7 @@ const Checkout = () => {
             </span>
             <a href="tel:9359480462">
               <img
-                src="/Images/nike.jpg"
+                src={profileImagePath}
                 className="w-16 rounded-full"
                 alt="Call"
               />

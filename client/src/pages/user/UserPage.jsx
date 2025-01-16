@@ -17,6 +17,11 @@ import {
   WorkHistoryIcon,
 } from "hugeicons-react";
 import React from "react";
+import {
+  profileImagePath,
+  watchImagePath,
+} from "../../constants/FileNameConstants";
+import { Link } from "react-router-dom";
 
 const UserPage = () => {
   const mobileNumber = 9359480462;
@@ -45,19 +50,21 @@ const UserPage = () => {
       id: 1,
       productName: "Classic Leather Watch",
       date: "2023-10-01",
+      productLink: "https://chronos-royal.netlify.app/watches",
       status: "Delivered",
     },
     {
       id: 2,
       productName: "Sport Smartwatch",
       date: "2023-09-25",
+      productLink: "https://chronos-royal.netlify.app/watches",
       status: "Pending",
     },
   ];
 
   const wishlist = [
-    { id: 1, name: "Luxury Gold Watch", image: "/Images/watch.png" },
-    { id: 2, name: "Minimalist Silver Watch", image: "/Images/watch.png" },
+    { id: 1, name: "Luxury Gold Watch", image: watchImagePath },
+    { id: 2, name: "Minimalist Silver Watch", image: watchImagePath },
   ];
 
   // Dummy Data for Saved Addresses
@@ -75,7 +82,7 @@ const UserPage = () => {
           <div className="mb-6 md:mb-0">
             <div className="rounded-full">
               <img
-                src="/Images/profile.jpg"
+                src={profileImagePath}
                 alt="Profile"
                 className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover"
               />
@@ -163,37 +170,74 @@ const UserPage = () => {
             Order History
             <WorkHistoryIcon />
           </h3>
-          <ul className="space-y-4">
-            {orders.map((order) => (
-              <li key={order.id} className="p-6 ">
-                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                  {/* Order Number */}
-                  <span className="text-indigo-100 text-lg font-bold   py-2 rounded-full">
-                    {order.id}
-                  </span>
+          <div className="overflow-x-auto max-h-[400px]">
+            {" "}
+            {/* Adjust max-height as needed */}
+            <table className="min-w-[90%] table-auto border-collapse border border-gray-700 text-left text-sm text-white">
+              <thead>
+                <tr className="bg-gray-800 text-indigo-100">
+                  <th className="px-4 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
+                    Order Number
+                  </th>
+                  <th className="px-4 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
+                    Product Name
+                  </th>
+                  <th className="px-4 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
+                    Date
+                  </th>
+                  <th className="px-6 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
+                    Product Link
+                  </th>
+                  <th className="px-6 py-3 border-b border-gray-700 sticky top-0 bg-gray-800 z-10 whitespace-nowrap">
+                    Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map((order) => (
+                  <tr key={order.id} className="border-b border-gray-700">
+                    {/* Order Number */}
+                    <td className="px-4 py-3 font-bold text-indigo-100 whitespace-nowrap">
+                      {order.id}
+                    </td>
 
-                  {/* Product Name and Date */}
-                  <div className="text-center md:text-left">
-                    <h3 className="text-xl font-semibold text-white">
-                      {order.productName}
-                    </h3>
-                    <p className="text-slate-400 mt-1">{order.date}</p>
-                  </div>
+                    {/* Product Name */}
+                    <td className="px-4 py-3 whitespace-nowrap">
+                      <h3 className="text-lg font-semibold">
+                        {order.productName}
+                      </h3>
+                    </td>
 
-                  {/* Status with Dynamic Color */}
-                  <span
-                    className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                      order.status === "Delivered"
-                        ? "bg-yellow-500/10 text-yellow-500"
-                        : "bg-green-500/10 text-green-500"
-                    }`}
-                  >
-                    {order.status}
-                  </span>
-                </div>
-              </li>
-            ))}
-          </ul>
+                    {/* Date */}
+                    <td className="px-4 py-3 text-slate-400 whitespace-nowrap">
+                      {order.date}
+                    </td>
+                    {/* product link */}
+                    <td className="px-7 py-3 text-slate-400 whitespace-nowrap">
+                      <Link
+                        to={order.productLink}
+                        className="text-blue-800 hover:text-blue-500"
+                      >
+                        product link
+                      </Link>
+                    </td>
+                    {/* Status with Dynamic Color */}
+                    <td className="px-4 py-3 whitespace-nowrap">
+                      <span
+                        className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                          order.status === "Delivered"
+                            ? "bg-yellow-500/10 text-yellow-500"
+                            : "bg-green-500/10 text-green-500"
+                        }`}
+                      >
+                        {order.status}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Wishlist Section */}
@@ -202,11 +246,11 @@ const UserPage = () => {
             Wishlist
             <ListViewIcon width={18} />
           </h3>
-          <ul className="flex flex-wrap gap-6">
+          <ul className="flex flex-row overflow-x-auto gap-x-4 p-4 sm:gap-x-6 sm:p-6 no-scrollbar">
             {wishlist.map((item) => (
               <li
                 key={item.id}
-                className="p-6 bg-gray-950 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 mx-auto md:mx-0"
+                className="flex-shrink-0 p-4 bg-gray-950 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 w-[280px] sm:w-[320px] md:w-[calc(33.33%-16px)] lg:w-[calc(25%-18px)]"
               >
                 {/* Product Image */}
                 <div className="relative w-full h-48 overflow-hidden rounded-lg">
@@ -214,20 +258,27 @@ const UserPage = () => {
                     src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
 
                 {/* Product Name */}
-                <div className="mt-4 text-lg font-semibold text-gray-100 text-center">
+                <div className="mt-4 text-lg font-semibold text-gray-100 text-center truncate">
                   {item.name}
                 </div>
 
                 {/* Action Buttons */}
                 <div className="mt-4 flex justify-center gap-3">
-                  <button className="px-4 py-2 bg-blue-500/10 text-blue-200  rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block">
+                  <button
+                    aria-label="Add to cart"
+                    className="px-4 py-2 bg-blue-500/10 text-blue-200 rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block"
+                  >
                     <ShoppingBasketAdd02Icon />
                   </button>
-                  <button className="px-4 py-2 bg-red-500/50 text-red-100 rounded-lg hover:bg-red-700 transition-colors duration-200">
+                  <button
+                    aria-label="Remove from wishlist"
+                    className="px-4 py-2 bg-red-500/50 text-red-100 rounded-lg hover:bg-red-700 transition-colors duration-200"
+                  >
                     <Remove01Icon />
                   </button>
                 </div>

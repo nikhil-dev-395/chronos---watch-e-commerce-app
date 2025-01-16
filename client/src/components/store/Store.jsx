@@ -2,8 +2,9 @@
 
 import { FavouriteIcon, NewReleasesIcon, StarIcon } from "hugeicons-react";
 import Assured from "../assured/Assured";
+import { storeImagePath } from "../../constants/FileNameConstants.js";
 const Store = ({
-  image = "/Images/store.jpg",
+  image = ` ${storeImagePath} `,
   location = "chaitany colony , yashoda nagar ,amravati , maharashtra , 4445050",
   storeOwner = "nikhil sanjay wankhade",
   storeName = "wankhade watch center",
@@ -16,7 +17,7 @@ const Store = ({
           <div className="">
             <div className="flex   pb-2 items-center  justify-between">
               <FavouriteIcon className="text-sky-500 hover:text-sky-400 transition duration-200 inline-block" />
-              <Assured to="/user"  />
+              <Assured to="/user" />
               {/* TODO :  currently i am giving a /user url but change it later after adding redux and backend*/}
             </div>
           </div>

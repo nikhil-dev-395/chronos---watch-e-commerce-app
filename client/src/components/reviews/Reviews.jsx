@@ -1,8 +1,9 @@
 import React from "react";
 import { StarIcon, ThumbsDownIcon, ThumbsUpIcon } from "hugeicons-react";
+import { watchImagePath } from "../../constants/FileNameConstants";
 export const Reviews = ({
   /* for testing purpose only i am going to try if we have image in review */
-  ReviewImage = "/Images/watch.png",
+  ReviewImage = {watchImagePath},
   // its now successful
 }) => {
   return (
