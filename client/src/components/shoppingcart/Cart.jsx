@@ -2,7 +2,7 @@ import { Cancel01Icon } from "hugeicons-react";
 import { watchImagePath } from "../../constants/FileNameConstants";
 
 const Cart = ({
-  image = {watchImagePath},
+  image = watchImagePath,
   limited = "0",
   model = "CH-8300F-RGLD",
   name = "luxury grand regulator rose gold",
